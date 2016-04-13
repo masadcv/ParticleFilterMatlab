@@ -177,7 +177,7 @@ Sk                = Sk(: , ON) + chol(R1)'*randn(d , N);
 for k = 1 : nb_frame ;
 
     fprintf('Frames = %d/%d\n' , k , nb_frame );
-    Sk               = A*Sk + Ck*randn(d , N);
+    Sk               = A*Sk; + Ck*randn(d , N);
     I                = read(video , offset_frame + k);
     Z                = double(I);
     im               = rgb2hsv_mex(Z);
